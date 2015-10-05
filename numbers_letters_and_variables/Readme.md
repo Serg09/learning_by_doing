@@ -1,3 +1,6 @@
+number_of_seconds
+---
+
 1. Create homework story in storytracker
 
 2. Create file number_of seconds.rb
