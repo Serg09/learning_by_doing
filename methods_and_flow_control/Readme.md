@@ -32,3 +32,25 @@ which are have no offenses, but I think the one I used with grouped expressions 
 8) Push
 
 9) Make a PR
+
+methods_and_flow_control
+---
+
+1) Create homework story in storytracker
+
+2) Create file fizz_buzz.rb
+
+3) Add code
+
+4) Run ```guard```. Got few offenses on wrong amount of spaces
+ 
+5) Run homework_tester. Showed no error with very first run.
+
+6) Add
+
+7) Commit
+
+8) Push
+
+9) Make a PR
+
