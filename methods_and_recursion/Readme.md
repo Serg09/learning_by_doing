@@ -1,6 +1,7 @@
 2 methods
 recursive
+methods_and_recursion/bottles_of_beer.rb:3:1: C: Assignment Branch Condition size for bottles is too high. [16.4/15]
+def bottles(beer)
+^^^
 
-First did everything with one method, but got many offenses on long lines, many lines and complexity.
-
-In this final version I slitted dig method into two. Rubocop and Travis did not show any errors.
+1 file inspected, 1 offense detected
