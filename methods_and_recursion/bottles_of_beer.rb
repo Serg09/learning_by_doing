@@ -7,14 +7,11 @@ def bottles(beer)
   if beer == 0
     beer = 'no more'
   end
-  # if beer_poem != 1
-  #   wd = 'bottles'
-  # else wd = 'bottle'
-  # end
   print "#{beer} #{wd} of beer on the wall,".capitalize
   print " #{beer} #{wd} of beer. \n".capitalize
   print 'Take one down and pass it around,'
   print " #{br} #{wd} of beer on the wall. \n\n".gsub('-1', '99').capitalize
+
   beer * bottles(beer - 1)
 end
 
