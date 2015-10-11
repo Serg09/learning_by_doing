@@ -15,15 +15,15 @@ end
 
 def print_verse(beer, word, word_2, count_down)
   if beer != 0
-    s = "#{beer} #{word}"
-    c = 'Take one down and pass it around,'
+    comb = "#{beer} #{word}"
+    txt = 'Take one down and pass it around,'
   else
-    s = "no more #{word}"
-    c = 'Go to the store and buy some more,'
+    comb = "no more #{word}"
+    txt = 'Go to the store and buy some more,'
   end
 
-  print "#{s.capitalize} of beer on the wall, #{s} of beer. \n"
-  print " #{c} #{count_down} #{word_2}".gsub('-1', '99')
+  print "#{comb.capitalize} of beer on the wall, #{comb} of beer. \n"
+  print " #{txt} #{count_down} #{word_2}".gsub('-1', '99')
   print " of beer on the wall. \n\n"
 end
 
