@@ -4,7 +4,7 @@ numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
 puts '- ' + numbers.join('...').to_s + '...'
 # puts '- T-10, 9, 8, 7, 6, 5, 4, 3, 2, 1... BLASTOFF!'
-puts '- T-' + numbers.reverse.join(', ') + '... BLASTOFF!'
+puts "- T-#{numbers.reverse.join(',')} ... BLASTOFF!"
 puts '- The last element is ' + numbers.last.to_s
 puts '- The first element is ' + numbers.first.to_s
 puts '- The third element is ' + numbers[2].to_s
