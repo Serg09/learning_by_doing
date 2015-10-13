@@ -1,7 +1,7 @@
 #!/usr/bin/env ruby
 
-def ask_question(quastion)
-  print "#{quastion}\n"
+def ask_question(question)
+  print "#{question}\n"
   gets.chomp
 end
 
@@ -12,7 +12,7 @@ noun_a = ask_question('Give me another noun:')
 noun_pl = ask_question('Give me a plural noun:')
 game = ask_question('Give me a game:')
 noun_pl_a = ask_question('Give me another plural noun:')
-verb_ing = ask_question("Give me a verb ending in 'ing':")sx
+verb_ing = ask_question("Give me a verb ending in 'ing':")
 verb_ing_a = ask_question("Give me another verb ending in 'ing':")
 noun_pl_aa = ask_question('Give me another plural noun:')
 verb_ing_aa = ask_question("Give me another verb ending in 'ing'")
