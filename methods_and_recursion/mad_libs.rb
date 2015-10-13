@@ -1,29 +1,29 @@
 #!/usr/bin/env ruby
 
-def ask_quastion(quastion)
+def ask_question(quastion)
   print "#{quastion}\n"
   gets.chomp
 end
 
-adj = ask_quastion('Give me an adjective:')
-adj_a = ask_quastion('Give me another adjective:')
-noun = ask_quastion('Give me a noun:')
-noun_a = ask_quastion('Give me another noun:')
-noun_pl = ask_quastion('Give me a plural noun:')
-game = ask_quastion('Give me a game:')
-noun_pl_a = ask_quastion('Give me another plural noun:')
-verb_ing = ask_quastion("Give me a verb ending in 'ing':")
-verb_ing_a = ask_quastion("Give me another verb ending in 'ing':")
-noun_pl_aa = ask_quastion('Give me another plural noun:')
-verb_ing_aa = ask_quastion("Give me another verb ending in 'ing'")
-noun_noun = ask_quastion('Give me another noun:')
-plant = ask_quastion('Give me a plant')
-body = ask_quastion('Give me a part of the body')
-place = ask_quastion('Give me a place')
-verb_ing_aaa = ask_quastion("Give me another verb ending in 'ing'")
-adj_aa = ask_quastion('Give me an adjective:')
-number = ask_quastion('Give me a number')
-noun_pl_aaa = ask_quastion('Give me a plural noun:')
+adj = ask_question('Give me an adjective:')
+adj_a = ask_question('Give me another adjective:')
+noun = ask_question('Give me a noun:')
+noun_a = ask_question('Give me another noun:')
+noun_pl = ask_question('Give me a plural noun:')
+game = ask_question('Give me a game:')
+noun_pl_a = ask_question('Give me another plural noun:')
+verb_ing = ask_question("Give me a verb ending in 'ing':")sx
+verb_ing_a = ask_question("Give me another verb ending in 'ing':")
+noun_pl_aa = ask_question('Give me another plural noun:')
+verb_ing_aa = ask_question("Give me another verb ending in 'ing'")
+noun_noun = ask_question('Give me another noun:')
+plant = ask_question('Give me a plant')
+body = ask_question('Give me a part of the body')
+place = ask_question('Give me a place')
+verb_ing_aaa = ask_question("Give me another verb ending in 'ing'")
+adj_aa = ask_question('Give me an adjective:')
+number = ask_question('Give me a number')
+noun_pl_aaa = ask_question('Give me a plural noun:')
 
 puts "A vacation is when you take a trip to some #{adj} place"
 puts "with your #{adj_a} family. Usually you go to some place"
