@@ -1,55 +1,31 @@
-# Cash Register
-class FishAquarium
+# Aquarium
+class BreedAquarium
+  attr_reader :fishes, :gallons_per_fish, :aquarium
   def initialize
-    fish
-    gallon
-    aquarium
-  end
-
-  def fish
-    @fishes = 2
-  end
-
-  def gallon
-    @gallons_fish = 2
-  end
-
-  def aquarium
+    @fishes = 5
+    @gallons_per_fish = 1.8
     @aquarium = 100
   end
 
-  def breed_fishes(fish)
-    @fishes += fish
-"""With new born fishes you have #{@fishes} fishes in the aquarium"""
+  def breed_fishes(fish) # pass haw many fry's and get total
+    "You have total #{@fishes += fish} fishes in the aquarium"
   end
 
-  def move_fishes
-    # @fishes *= @gallons_fish
-    if (@gallons_fish * @fishes) > @aquarium
-"""You have total #{@fishes} fishes in aquarium.
-Minimum required size of aquarium #{@gallons_fish * @fishes} gallons.
-Too many fishes!!!
-Please remove #{((@gallons_fish * @fishes) - @aquarium) / @gallons_fish} fishes
-"""
+  def down_fishes(fish) # pass amount of relocated fishes and what left
+    "You have decrease amount of fishes to #{@fishes -= fish}"
+  end
+
+  def test_aquarium # test
+    if (@gallons_per_fish * @fishes) > @aquarium
+      "You have total #{@fishes} fishes in the aquarium.
+Minimum required size of aquarium
+for #{@fishes} fishes is #{@gallons_per_fish * @fishes} gallons.
+Please decrease amount of fishes by
+#{(((@gallons_per_fish * @fishes) - @aquarium) / @gallons_per_fish).round(0)}"
     else
-"""Minimum aquarium size #{@gallons_fish * @fishes} gallons
-You have #{@fishes} fishes in a #{@aquarium} gallon aquarium
-"""
+      "Minimum aquarium size for #{@fishes}
+fishes is #{@gallons_per_fish * @fishes} gallons
+You have #{@fishes} fishes in a #{@aquarium} gallon aquarium"
     end
   end
-
-    def total
-      @fishes
-    end
-
 end
-
-aquarium = FishAquarium.new
-
-puts "Breeding fishes #{aquarium.total}\n\n"
-puts aquarium.breed_fishes(30)
-puts aquarium.move_fishes
-puts "Total #{aquarium.total} fishes\n\n"
-puts aquarium.breed_fishes(30)
-puts aquarium.move_fishes
-puts "Total #{aquarium.total} fishes"
