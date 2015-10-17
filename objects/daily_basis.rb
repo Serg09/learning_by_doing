@@ -1,48 +1,55 @@
-# class Car
-#   def drive(speed, speed_limit)
-#     @speed = speed
-#     @speed_limit = speed_limit
-#   end
-#   def park
-#     @speed = 0
-#   end
-#   def wash
-#     @last_washed = Time.now
-#   end
-#   def notice_cop
-#     slow_down if speeding?
-#   end
-# end
-
 # Cash Register
 class FishAquarium
   def initialize
-    @fishes = 0
+    fish
+    gallon
+    aquarium
   end
 
-  def purchase(amount)
-    @fishes += amount
+  def fish
+    @fishes = 2
   end
 
-  def sold(sold_fish)
-      fish_left = @fishes - sold_fish
-      # @total = (@total - amount)
-      "Fishes left #{fish_left}"
+  def gallon
+    @gallons_fish = 2
+  end
+
+  def aquarium
+    @aquarium = 100
+  end
+
+  def breed_fishes(fish)
+    @fishes += fish
+"""With new born fishes you have #{@fishes} fishes in the aquarium"""
+  end
+
+  def move_fishes
+    # @fishes *= @gallons_fish
+    if (@gallons_fish * @fishes) > @aquarium
+"""You have total #{@fishes} fishes in aquarium.
+Minimum required size of aquarium #{@gallons_fish * @fishes} gallons.
+Too many fishes!!!
+Please remove #{((@gallons_fish * @fishes) - @aquarium) / @gallons_fish} fishes
+"""
+    else
+"""Minimum aquarium size #{@gallons_fish * @fishes} gallons
+You have #{@fishes} fishes in a #{@aquarium} gallon aquarium
+"""
     end
   end
 
-  def total
-    @fishes
-  end
+    def total
+      @fishes
+    end
+
 end
 
 aquarium = FishAquarium.new
 
-puts aquarium.total
-puts aquarium.purchase(4)
-# puts aquarium.purchase(6)
-puts aquarium.total
-puts aquarium.sold(5)
-puts aquarium.total
-# puts aquarium.sell(5.00)
-# puts aquarium.total
+puts "Breeding fishes #{aquarium.total}\n\n"
+puts aquarium.breed_fishes(30)
+puts aquarium.move_fishes
+puts "Total #{aquarium.total} fishes\n\n"
+puts aquarium.breed_fishes(30)
+puts aquarium.move_fishes
+puts "Total #{aquarium.total} fishes"
