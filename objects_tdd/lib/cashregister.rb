@@ -1,13 +1,16 @@
 # Cash Register
 class CashRegister
-  def initialize
+  def self.initialize
     @total = 0.00
   end
 end
 
-#   def purchase(price)
-#     @total += price
-#   end
+  def self.purchase(price)
+    if (@total += price) == (@total += price)
+    else
+      true
+    end
+  end
 #
 #   def pay(payment)
 #     change = payment - @total
@@ -20,10 +23,10 @@ end
 #   end
 # end
 #
-# register = CashRegister.new
+register = CashRegister.new
 #
 # puts register.total # set to 0
-# puts register.purchase(3.78)
+# register.purchase(3.78)
 # puts register.total # return cash + purchase
 # puts register.pay(5.00)
 # puts register.total
