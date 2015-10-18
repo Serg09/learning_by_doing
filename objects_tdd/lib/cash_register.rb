@@ -10,16 +10,13 @@ def purchase(price)
 end
 
 def pay(payment)
-  change = payment - @total
-  @total = 0.00 # total reset to 0
-  "Your change is $#{change.round(2)}"
+  @total += payment
 end
-#
-#   def total
-#     format('%.2f', @total) # two decimals format
-#   end
-# end
-#
+
+def total
+  format('%.2f', @total) # two decimals format
+end
+
 # register = CashRegister.new
 #
 # puts register.total # set to 0
