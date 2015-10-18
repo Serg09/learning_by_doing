@@ -3,21 +3,24 @@
 # Cash Register
 class CashRegister
   def initialize
-    cash
-  end
-
-  def cash # cash.
     @total = 0.00
   end
 
   def purchase(price)
-    @total += price
+    # '%0.2f' % @total += price
+    format '%0.2f', @total += price
   end
 
   def pay(payment)
-    change = payment - @total
-    @total = 0.00 # total reset to 0
-    "Your change is $#{change.round(2)}"
+    if @total > payment # first pay
+      total = (@total - payment).round(2)
+      @total = (@total - payment).round(2)
+      "Your new total is $#{format '%0.2f', total}"
+    else
+      total = (payment - @total)
+      @total = 0.00
+      "Your change is $#{total}"
+    end
   end
 
   def total
@@ -29,6 +32,9 @@ register = CashRegister.new
 
 puts register.total # set to 0
 puts register.purchase(3.78)
+puts register.purchase(5.22) # => 9.00
 puts register.total # return cash + purchase
 puts register.pay(5.00)
 puts register.total
+puts register.pay(5.00) # => "Your change is $1.00"
+puts register.total # => 0.00
