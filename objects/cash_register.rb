@@ -19,7 +19,7 @@ class CashRegister
     else
       total = (payment - @total)
       @total = 0.00
-      "Your change is $#{total}"
+      "Your change is $#{format '%0.2f', total}"
     end
   end
 
