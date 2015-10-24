@@ -35,7 +35,6 @@ puts register.purchase(3.78) # => 3.78
 puts register.total # total => 3.78
 puts register.pay(5.00) # => "Your change is $1.22"
 puts register.total # => 0.00
-puts
 
 register = CashRegister.new
 
