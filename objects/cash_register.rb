@@ -13,20 +13,29 @@ class CashRegister
 
   def pay(payment)
     if @total > payment # first pay
-      total = (@total - payment)
+      # total = (@total - payment)
       @total = (@total - payment)
-      "Your new total is $#{format '%0.2f', total}"
+      puts "Your new total is $#{total}"
     else
-      total = (payment - @total)
+      @total -= payment
+      puts "Your change is $#{total}"
       @total = 0.00
-      "Your change is $#{format '%0.2f', total}"
     end
   end
 
   def total
-    format('%.2f', @total) # two decimals format
+    format('%.2f', @total.abs) # two decimals format
   end
 end
+
+register = CashRegister.new
+
+puts register.total # set to 0
+puts register.purchase(3.78) # => 3.78
+puts register.total # total => 3.78
+puts register.pay(5.00) # => "Your change is $1.22"
+puts register.total # => 0.00
+puts
 
 register = CashRegister.new
 
