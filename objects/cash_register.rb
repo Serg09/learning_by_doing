@@ -8,13 +8,13 @@ class CashRegister
 
   def purchase(price)
     # '%0.2f' % @total += price
-    format '%0.2f', @total += price
+    @total += price
   end
 
   def pay(payment)
     if @total > payment # first pay
-      total = (@total - payment).round(2)
-      @total = (@total - payment).round(2)
+      total = (@total - payment)
+      @total = (@total - payment)
       "Your new total is $#{format '%0.2f', total}"
     else
       total = (payment - @total)
