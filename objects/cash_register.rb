@@ -1,19 +1,16 @@
 #!/usr/bin/env ruby
 
-# Cash Register
 class CashRegister
   def initialize
     @total = 0.00
   end
 
   def purchase(price)
-    # '%0.2f' % @total += price
     @total += price
   end
 
   def pay(payment)
-    if @total > payment # first pay
-      # total = (@total - payment)
+    if @total > payment
       @total = (@total - payment)
       puts "Your new total is $#{total}"
     else
@@ -24,7 +21,7 @@ class CashRegister
   end
 
   def total
-    format('%.2f', @total.abs) # two decimals format
+    format('%.2f', @total.abs)
   end
 end
 
