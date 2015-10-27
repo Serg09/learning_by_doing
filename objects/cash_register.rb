@@ -1,12 +1,7 @@
 #!/usr/bin/env ruby
 
-# Cash Register
 class CashRegister
   def initialize
-    cash
-  end
-
-  def cash # cash.
     @total = 0.00
   end
 
@@ -15,20 +10,36 @@ class CashRegister
   end
 
   def pay(payment)
-    change = payment - @total
-    @total = 0.00 # total reset to 0
-    "Your change is $#{change.round(2)}"
+    if @total > payment
+      @total = (@total - payment)
+      puts "Your new total is $#{total}"
+    else
+      @total -= payment
+      puts "Your change is $#{total}"
+      @total = 0.00
+    end
   end
 
   def total
-    format('%.2f', @total) # two decimals format
+    format('%.2f', @total.abs)
   end
 end
 
 register = CashRegister.new
 
 puts register.total # set to 0
+puts register.purchase(3.78) # => 3.78
+puts register.total # total => 3.78
+puts register.pay(5.00) # => "Your change is $1.22"
+puts register.total # => 0.00
+
+register = CashRegister.new
+
+puts register.total # set to 0
 puts register.purchase(3.78)
+puts register.purchase(5.22) # => 9.00
 puts register.total # return cash + purchase
 puts register.pay(5.00)
 puts register.total
+puts register.pay(5.00) # => "Your change is $1.00"
+puts register.total # => 0.00
