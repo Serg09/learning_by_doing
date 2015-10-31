@@ -3,9 +3,9 @@ require 'rspec'
 
 describe CashRegister do
   describe '.total' do
-    it 'should return 0.00 for a starting total price' do
+    it 'should return 0.0 for a starting total price' do
       register = CashRegister.new
-      expect(register.total).to eq(0.00)
+      expect(register.total).to eq(0.0)
     end
   end
 end
@@ -34,10 +34,10 @@ describe '.purchase' do
     end
 
     describe '/.total' do
-      it 'should return reset total to 0.00' do
+      it 'should return reset total to 0.0' do
         register = CashRegister.new
         register.total
-        expect(register.total).to eq(0.00)
+        expect(register.total).to eq(0.0)
       end
     end
   end

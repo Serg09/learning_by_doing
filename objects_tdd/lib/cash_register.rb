@@ -2,7 +2,7 @@
 class CashRegister
   attr_reader :total
   def initialize
-    @total = 0.00
+    @total = 0.0
   end
 
   def purchase(price)
@@ -13,7 +13,7 @@ class CashRegister
     @total -= payment
   end
 
-  def total
-    @total.round(2) # two decimals format
-  end
+  # def total
+  #   @total
+  # end
 end
