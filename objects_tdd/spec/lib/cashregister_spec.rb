@@ -10,7 +10,7 @@ describe CashRegister do
   end
 end
 
-describe '.purchase' do
+describe '#purchase' do
   # context 'purchase' do
   it 'should add amount to the total' do
     register = CashRegister.new
@@ -20,7 +20,7 @@ describe '.purchase' do
     expect(register.total).to eq(9)
   end
 
-  describe '.pay' do
+  describe '#pay' do
     # context 'purchase' do
     it 'should subtract amount from the total' do
       register = CashRegister.new
@@ -33,7 +33,7 @@ describe '.purchase' do
       # register.total
     end
 
-    describe '/.total' do
+    describe '#total' do
       it 'should return reset total to 0.0' do
         register = CashRegister.new
         register.total
