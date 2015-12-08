@@ -1,3 +1,6 @@
-Guard has no offenses
+2 methods
+recursive
 
-Travis has no error
+First did everything with one method, but got many offenses on long lines, many lines and complexity.
+
+In this final version I slitted dig method into two. Rubocop and Travis did not show any errors.
